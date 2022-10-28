@@ -6,7 +6,7 @@ const NotFound = () => {
     const router = useRouter()
     useEffect(()=>{
         setTimeout(()=> {
-            router.push("/")
+            router.push('/')
             console.log('use effect runs')
         }, 3000)
         
@@ -14,15 +14,11 @@ const NotFound = () => {
     })
     return (
         <div className="not-found">
-
-            <h1>Ooooops...</h1>
-            <h2>That page can't be found.</h2>
-            <p> Go back to the 
-                <Link href="/" className={styles.btn}> Home </Link>
-            </p>
+          <h1>Ooops...</h1>
+          <h2>That page cannot be found :(</h2>
+          <p>Going back to the <Link href="/"><a>Homepage</a></Link> is 3 seconds...</p>
         </div>
-    )
-}
-
-export default NotFound;
-
+      );
+    }
+     
+    export default NotFound;
